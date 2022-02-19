@@ -1,12 +1,12 @@
-// import GalleryItem from '../GalleryItem';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
 function GalleryList() {
-    console.log('this is galleryList')
+    console.log('this is galleryList');
     return (
         <>
-            <p>
-                a string 
-            </p>
+            <div>
+               <GalleryItem/>
+            </div>
         </>
 
     )
