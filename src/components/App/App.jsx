@@ -29,6 +29,22 @@ function App() {
         console.log('Error on get:', error);
       });
   }
+
+  const changeLikes = (id) => {
+    axios({
+      method: 'PUT',
+      url: `/gallery/like/${id}`
+    })
+      .then( (response) => {
+   
+        getPhotos();
+      })
+      .catch(function (error) {
+        console.log('Error on put:', error);
+      });
+
+  }
+
 console.log('gallerylist', galleryList);
 
   useEffect(() => {
@@ -45,6 +61,7 @@ console.log('gallerylist', galleryList);
       <div>
       <GalleryList 
       list={galleryList}
+      changeLikes={changeLikes}
       />
       </div>
     </div>

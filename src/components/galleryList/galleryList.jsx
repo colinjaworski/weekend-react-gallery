@@ -1,13 +1,10 @@
 
 import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList({ list }) {
+function GalleryList({ list, changeLikes }) {
     console.log('this is list in GalleryList.jsx', list);
 
-    // const handleClick = () => {
-    //     console.log('sup fucker!');
-
-    // };
+   
 
     return (
         <>
@@ -16,6 +13,7 @@ function GalleryList({ list }) {
                 <GalleryItem  
                 key={taco.id} 
                 burrito={taco}
+                changeLikes={changeLikes}
                 /> 
             )}
             </div>
