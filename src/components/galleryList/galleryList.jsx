@@ -1,14 +1,20 @@
+
 import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList() {
-    console.log('this is galleryList');
+function GalleryList({ list }) {
+    console.log('this is list in GalleryList.jsx', list);
+
     return (
         <>
-            <div>
-               <GalleryItem/>
-            </div>
-        </>
+            {list.map(taco =>
+            (<div key={taco.id}>
+                <img src={taco.path} width="150" height="150" />
+                {taco.description}
+            </div>)
 
+            )}
+
+        </>
     )
 }
 

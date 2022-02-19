@@ -13,28 +13,26 @@ function App() {
 
 
   const getPhotos = () => {
-    console.log('getting creature photos');
+    // console.log('getting photos');
     axios({
       method: 'GET',
       url: '/gallery'
     })
       .then( (response) => {
         // console.log('Entire response:', response);
-        // The actual array comes from the data attribute on the response
-        console.log('Just the data:', response.data);
-  
+        // console.log('Just the data:', response.data);
         // Set data into component state
         setGalleryList(response.data);
-      
+      // don't call galleryList inside the same function that it's being initiallized or you'll get an empty array!!!
       })
       .catch(function (error) {
         console.log('Error on get:', error);
       });
   }
-  console.log('galleryList is :', galleryList);
+console.log('gallerylist', galleryList);
 
   useEffect(() => {
-  console.log('first load using useEffect');
+  // console.log('first load using useEffect');
     getPhotos();
   }, [])
 
@@ -43,8 +41,10 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
-      <p>Gallery goes here</p>
-      <GalleryList />
+      <p>The gallery</p>
+      <GalleryList 
+      list={galleryList}
+      />
     </div>
   );
 }
