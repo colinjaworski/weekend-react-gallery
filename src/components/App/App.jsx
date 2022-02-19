@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import GalleryList from '../GalleryList/GalleryList';
 
 function App() {
     return (
@@ -8,6 +9,9 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
+        <GalleryList
+        taco="hello world"
+        title="Creatures!"/>
         <img src="images/goat_small.jpg"/>
         <img src="images/annie.jpeg" width="150" height="150"/>
         <img src="images/b.jpeg" width="150" height="150"/>

@@ -1,15 +1,15 @@
-import galleryItem from '../galleryItem';
+// import GalleryItem from '../GalleryItem';
 
-function galleryItem() {
+function GalleryList() {
+    console.log('this is galleryList')
+    return (
+        <>
+            <p>
+                a string 
+            </p>
+        </>
 
-return (
-    <>
-        <ul>
-            {list.map(creature =>
-                (<li key={creature.id}>{creature.name} is from {creature.origin}</li>)
-            )}
-        </ul>
-    </>
+    )
+}
 
-)
-            }
+export default GalleryList;
