@@ -14,11 +14,14 @@ function GalleryItem({ burrito }) {
 
     return (
         <>
-            <div key={burrito.id} />
-            {highlight ? <div onClick={handleLikeClick}><img src={burrito.path} width="150" height="150" /></div> : <div onClick={handleLikeClick}>{burrito.description}</div>}
-            
-            <button>Likes</button>
-            <div>{burrito.likes}</div>
+            <div className="photoDump" key={burrito.id}>
+                <div className="justPhoto">
+                    {highlight ? <div onClick={handleLikeClick}><img src={burrito.path} width="150" height="150" /></div> : <div onClick={handleLikeClick}>{burrito.description} </div>}
+               
+                <button>Likes</button>
+                <div>{burrito.likes} people like this </div>
+                </div>
+            </div>
         </>
 
     )

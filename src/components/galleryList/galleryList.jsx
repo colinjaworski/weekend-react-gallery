@@ -11,13 +11,14 @@ function GalleryList({ list }) {
 
     return (
         <>
+        <div>
             {list.map(taco =>
                 <GalleryItem  
                 key={taco.id} 
                 burrito={taco}
                 /> 
             )}
-
+            </div>
         </>
     )
 }

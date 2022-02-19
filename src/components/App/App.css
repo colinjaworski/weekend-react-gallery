@@ -13,3 +13,11 @@
   font-size: 1.5em;
 }
 
+.photoDump {
+  display: inline-flex;
+ padding: 5px;
+}
+
+/* .justPhoto {
+
+} */

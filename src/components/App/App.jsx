@@ -42,9 +42,11 @@ console.log('gallerylist', galleryList);
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
       <p>The gallery</p>
+      <div>
       <GalleryList 
       list={galleryList}
       />
+      </div>
     </div>
   );
 }
