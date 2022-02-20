@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: rgb(243, 233, 210);
 }
 
 .App-header {
@@ -7,25 +8,34 @@
   padding: 1em;
   color: white;
   margin-bottom: 1em;
+  background-color: rgb(17, 75, 95);
+  border-radius: 6px;
 }
 
 .App-title {
   font-size: 1.5em;
+  border-radius: 6px;
 }
 
 .photoDump {
-  display: inline-flex;
- padding: 5px;
- height: 150;
- width: 150;
-}
-.justPhoto {
-  border-style: solid;
-  border-color: black;
-  min-height: 150;
-  min-width: 150;
-  max-height: 150;
-  max-width: 150;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 6px;
 }
 
+.burritoText {
+  width: 150px;
+  height: 150px; 
+  margin-bottom: 3.5px;
+  background-color: rgb(26, 147, 111);
+ 
+  
+}
 
+.theGallery {
+  background-color: rgb(198, 218, 191);
+  width: 100px;
+  margin: auto;
+  border-radius: 5px;
+  
+}

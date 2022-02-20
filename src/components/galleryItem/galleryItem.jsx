@@ -5,15 +5,15 @@ import { useState } from 'react';
 function GalleryItem({ burrito, changeLikes }) {
     // console.log('this is potato')
 
-    const [highlight, setHighlight] = useState(true);
-    
+    const [image, setImage] = useState(true);
+
 
     const photoFlip = () => {
         console.log('you fliped the photo', burrito.id);
-        setHighlight(!highlight);
+        setImage(!image);
     };
     const handleLikeClick = () => {
-        console.log('you clicked the like button' );
+        console.log('you clicked the like button');
         changeLikes(burrito.id);
     };
 
@@ -21,10 +21,11 @@ function GalleryItem({ burrito, changeLikes }) {
         <>
             <div className="photoDump" key={burrito.id}>
                 <div className="justPhoto">
-                    {highlight ? <div onClick={photoFlip}><img src={burrito.path} width="150" height="150" /></div> : <div onClick={photoFlip}>{burrito.description} </div>}
+                    {image ? <div onClick={photoFlip}><img src={burrito.path} width="150px" height="150px"/></div> : <div className="burritoText" onClick={photoFlip}>{burrito.description} </div>}
                 </div>
+
                 <div>
-                    <button onClick={handleLikeClick}>Likes</button>
+                    <button onClick={handleLikeClick}>Like</button>
                     <div>{burrito.likes} people like this </div>
                 </div>
             </div>

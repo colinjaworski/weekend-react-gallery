@@ -20,7 +20,7 @@ function App() {
     })
       .then( (response) => {
         // console.log('Entire response:', response);
-        // console.log('Just the data:', response.data);
+        // console.log('Just data:', response.data);
         // Set data into component state
         setGalleryList(response.data);
       // don't call galleryList inside the same function that it's being initiallized or you'll get an empty array!!!
@@ -57,14 +57,18 @@ console.log('gallerylist', galleryList);
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
-      <p>The gallery</p>
+      <p className="theGallery">The gallery</p>
       <div>
       <GalleryList 
       list={galleryList}
       changeLikes={changeLikes}
       />
       </div>
+      <footer>
+
+      </footer>
     </div>
+    
   );
 }
 
