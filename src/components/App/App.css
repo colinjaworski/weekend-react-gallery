@@ -1,41 +1,32 @@
 .App {
-  text-align: center;
-  background-color: rgb(243, 233, 210);
+  text-align: center; 
+  background-color: rgb(221, 216, 188);     
 }
-
 .App-header {
-  background-color: #222;
+  background-color: rgb(61, 64, 91);
   padding: 1em;
-  color: white;
+  color: rgb(224, 137, 112);
   margin-bottom: 1em;
-  background-color: rgb(17, 75, 95);
   border-radius: 6px;
 }
-
 .App-title {
   font-size: 1.5em;
   border-radius: 6px;
 }
-
 .photoDump {
   display: inline-block;
   padding: 10px;
-  border-radius: 6px;
+  border-radius: 6px; 
 }
-
 .burritoText {
   width: 150px;
   height: 150px; 
   margin-bottom: 3.5px;
-  background-color: rgb(26, 147, 111);
- 
-  
+  background-color: rgb(242, 204, 143);
 }
-
 .theGallery {
-  background-color: rgb(198, 218, 191);
+  background-color: rgb(224, 137, 112);
   width: 100px;
   margin: auto;
   border-radius: 5px;
-  
 }

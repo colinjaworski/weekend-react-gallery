@@ -55,18 +55,15 @@ console.log('gallerylist', galleryList);
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="App-title">Gallery of My Life</h1>
+        <h1 className="App-title">Vacation Photos</h1>
       </header>
-      <p className="theGallery">The gallery</p>
+      <p className="theGallery">Mexico</p>
       <div>
       <GalleryList 
       list={galleryList}
       changeLikes={changeLikes}
       />
       </div>
-      <footer>
-
-      </footer>
     </div>
     
   );

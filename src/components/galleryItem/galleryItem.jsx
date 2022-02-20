@@ -25,7 +25,7 @@ function GalleryItem({ burrito, changeLikes }) {
                 </div>
 
                 <div>
-                    <button onClick={handleLikeClick}>Like</button>
+                    <button className="button" onClick={handleLikeClick}>Like</button>
                     <div>{burrito.likes} people like this </div>
                 </div>
             </div>
