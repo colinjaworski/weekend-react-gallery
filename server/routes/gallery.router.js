@@ -16,6 +16,17 @@ router.put('/like/:id', (req, res) => {
     res.sendStatus(200);
 }); // END PUT Route
 
+router.delete('/delete/:id', (req, res) => {
+    console.log(req.params);
+    const galleryId = req.params.id;
+    for(const galleryItem of galleryItems) {
+        if(galleryItem.id == galleryId) {
+            console.log('deleted the item');
+        }
+    }
+    res.sendStatus(200); 
+})
+
 // GET Route
 router.get('/', (req, res) => {
     res.send(galleryItems);

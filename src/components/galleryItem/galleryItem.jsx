@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 
 
-function GalleryItem({ burrito, changeLikes }) {
+function GalleryItem({ burrito, changeLikes, deletePhoto }) {
     // console.log('this is potato')
 
     const [image, setImage] = useState(true);
@@ -16,6 +16,10 @@ function GalleryItem({ burrito, changeLikes }) {
         console.log('you clicked the like button');
         changeLikes(burrito.id);
     };
+    const handleDeleteClick = () => {
+        console.log('you clicked the delete button');
+        deletePhoto(burrito.id);
+    };
 
     return (
         <>
@@ -26,6 +30,7 @@ function GalleryItem({ burrito, changeLikes }) {
 
                 <div>
                     <button className="button" onClick={handleLikeClick}>Like</button>
+                    <button className="deleteButton" onClick={handleDeleteClick}>Delete</button>
                     <div>{burrito.likes} people like this </div>
                 </div>
             </div>

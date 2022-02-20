@@ -10,8 +10,6 @@ function App() {
 
   const [galleryList, setGalleryList] = useState([]);
 
-
-
   const getPhotos = () => {
     // console.log('getting photos');
     axios({
@@ -36,13 +34,24 @@ function App() {
       url: `/gallery/like/${id}`
     })
       .then( (response) => {
-   
         getPhotos();
       })
       .catch(function (error) {
         console.log('Error on put:', error);
       });
+  }
 
+  const deletePhoto = (id) => {
+    axios({
+      method: 'DELETE',
+      url: `/gallery/delete/${id}`
+    })
+    .then( (response) => {
+      getPhotos();
+    })
+    .catch(function (error) {
+      console.log('Error deleting item:', error);
+    });
   }
 
 console.log('gallerylist', galleryList);
@@ -62,6 +71,7 @@ console.log('gallerylist', galleryList);
       <GalleryList 
       list={galleryList}
       changeLikes={changeLikes}
+      deletePhoto={deletePhoto}
       />
       </div>
     </div>
