@@ -3,8 +3,6 @@ import axios from 'axios';
 import React from 'react';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
-import GalleryItem from '../GalleryItem/GalleryItem';
-
 
 function App() {
 
@@ -16,12 +14,12 @@ function App() {
       method: 'GET',
       url: '/gallery'
     })
-      .then( (response) => {
+      .then((response) => {
         // console.log('Entire response:', response);
         // console.log('Just data:', response.data);
         // Set data into component state
         setGalleryList(response.data);
-      // don't call galleryList inside the same function that it's being initiallized or you'll get an empty array!!!
+        // don't call galleryList inside the same function that it's being initiallized or you'll get an empty array!!!
       })
       .catch(function (error) {
         console.log('Error on get:', error);
@@ -33,7 +31,7 @@ function App() {
       method: 'PUT',
       url: `/gallery/like/${id}`
     })
-      .then( (response) => {
+      .then((response) => {
         getPhotos();
       })
       .catch(function (error) {
@@ -46,18 +44,17 @@ function App() {
       method: 'DELETE',
       url: `/gallery/delete/${id}`
     })
-    .then( (response) => {
-      getPhotos();
-    })
-    .catch(function (error) {
-      console.log('Error deleting item:', error);
-    });
+      .then((response) => {
+        getPhotos();
+      })
+      .catch(function (error) {
+        console.log('Error deleting item:', error);
+      });
   }
-
-console.log('gallerylist', galleryList);
+  // console.log('gallerylist', galleryList);
 
   useEffect(() => {
-  // console.log('first load using useEffect');
+    // console.log('first load using useEffect');
     getPhotos();
   }, [])
 
@@ -68,14 +65,14 @@ console.log('gallerylist', galleryList);
       </header>
       <p className="theGallery">Mexico</p>
       <div>
-      <GalleryList 
-      list={galleryList}
-      changeLikes={changeLikes}
-      deletePhoto={deletePhoto}
-      />
+        <GalleryList
+          list={galleryList}
+          changeLikes={changeLikes}
+          deletePhoto={deletePhoto}
+        />
       </div>
     </div>
-    
+
   );
 }
 
